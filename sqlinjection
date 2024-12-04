@@ -20,7 +20,10 @@ select tireid,name,size,cost from session.Tires union select id,name,pass from s
 SELECT id, title FROM movies WHERE id = 6;
 SELECT title, year FROM movies WHERE year <= 2003;
 
-input post mehtod
-url bar get method
+??????input post mehtod 
+??????url bar get method
 
 SELECT id FROM users WHERE name=‘tom' OR 1='1’ AND pass=‘tom' OR 1='1’
+
+cat /var/www/html
+
