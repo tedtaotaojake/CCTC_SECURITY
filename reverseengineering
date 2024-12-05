@@ -59,8 +59,17 @@ put in downlaods change name
 run new 
 
 ***STACK IS FILO***
+-----------------------------------------------------------______________________---------------------------
 
+student@lin-ops:~$ ssh -MS /tmp/jump student@10.50.35.127 
+student@lin-ops:~$ ssh -S /tmp/jump jump -O forward -L 1111:192.168.28.111:2222
+student@lin-ops:~$ ssh comrade@127.0.0.1 -p 1111 (creds given)
+comrade@web:/var/www/html/consulting/public_html/longTermStorage$ 
+student@lin-ops:~$ scp -r -P 1111 comrade@127.0.0.1:/var/www/html/consulting/public_html/longTermStorage .
+student@lin-ops:~$ scp -r longTermStorage student@10.50.25.127:C:\Downloads
 
+c file = vscode
+read key, boom
 
 
 
