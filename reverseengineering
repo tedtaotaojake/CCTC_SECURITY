@@ -30,6 +30,7 @@ mem2:
     ret                  //Return the value of rax (first return register) ** (rax(0)) **
 
 ----------------------------------------------------------------------------------------------------------------------------------
+--demo1--
 cd downloads
 ls
 C:\Users\student\downloads> .\SysinternalsSuite\strings.exe .\demo1_new.exe
@@ -41,5 +42,31 @@ analyze
 seach for strings
 cross reference
 trace back, research functions
+
+--demo2--
+STATIC ANALYSIS 
+PS C:\Users\student\downloads> .\SysinternalsSuite\strings.exe .\demo2_new.exe
+look for sus things. good info
+Get-content .\demo2_new.exe | select -First 1
+cannot be run in dos mod = windows exe
+PS C:\Users\student\downloads> .\demo2_new.exe
+ghidra
+search for strings
+key
+can change on listening right click
+file export --> PE
+put in downlaods change name
+run new 
+
+***STACK IS FILO***
+
+
+
+
+
+
+
+
+
 
 
