@@ -1,3 +1,4 @@
+
 main: 
     mov rax, 16            //1)move into rax the value of 16 or 2)Move 16 into rax
     push rax               //Push the value of rax(16) onto the stack. Stack grows by 8 bytes (64 bit register uses 8 bytes)
@@ -10,3 +11,24 @@ mem2:
     pop r8                //Pop value from top of stack(16) into r8. r8 is 16 now. Stack shrinks by 8bytes
     cmp rax, r8           //compare to the value of rax (16) to the value of r8 (16). r8 is subtracted from rax = 0 (0 flag set)
     je mem1               //Zero flag set from previous operation; values are equal. Jump to memory location of mem1
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+main:
+    mov rcx, 25           //move rcx the value of 25
+    mov rbx, 62           // move into rbx the value of 62
+    jmp mem1              //jump to memory location of mem1
+
+mem1:
+    sub rbx, 40          //subtract rbx(62) the value of 40. Now = 22
+    mov rsi, rbx         //Move into rsi the value of rbx (22). Now rsi is 22 also
+    cmp rcx, rsi         //compare rcx(25) - rsi (22) = 3 (3 Flag set)
+    jle mem2             //Flag is et. Jump to memory location of mem2 
+
+mem2:
+    mov rax, 0           //move into rax the value of 0
+    ret                  //Return the value of rax (first return register) ** (rax(0)) **
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
