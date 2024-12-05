@@ -1,0 +1,12 @@
+main: 
+    mov rax, 16            //1)move into rax the value of 16 or 2)Move 16 into rax
+    push rax               //Push the value of rax(16) onto the stack. Stack grows by 8 bytes (64 bit register uses 8 bytes)
+    jmp mem2               //Jump to memory location of mem2
+
+mem1:
+    mov rax, 0            //Move into rax the value of 0. (status code)
+    ret                   //Return the value of rax (first return registered) ** (0) **
+mem2:
+    pop r8                //Pop value from top of stack(16) into r8. r8 is 16 now. Stack shrinks by 8bytes
+    cmp rax, r8           //compare to the value of rax (16) to the value of r8 (16). r8 is subtracted from rax = 0 (0 flag set)
+    je mem1               //Zero flag set from previous operation; values are equal. Jump to memory location of mem1
