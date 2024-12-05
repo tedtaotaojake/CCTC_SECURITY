@@ -30,5 +30,16 @@ mem2:
     ret                  //Return the value of rax (first return register) ** (rax(0)) **
 
 ----------------------------------------------------------------------------------------------------------------------------------
+cd downloads
+ls
+C:\Users\student\downloads> .\SysinternalsSuite\strings.exe .\demo1_new.exe
+look for sus things. Program cannot be ran in DOS mode
+Get-content .\demo1_new.exe | select -First 1
+ghidra
+drag
+analyze
+seach for strings
+cross reference
+trace back, research functions
 
 
