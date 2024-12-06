@@ -58,6 +58,14 @@ file export --> PE
 put in downlaods change name
 run new 
 
+strings func(file)
+file func
+chmod u+x func
+ls -l func
+./func
+
+
+
 ***STACK IS FILO***
 -----------------------------------------------------------______________________---------------------------
 
