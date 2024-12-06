@@ -53,7 +53,7 @@ PS C:\Users\student\downloads> .\demo2_new.exe
 ghidra
 search for strings
 key
-can change on listening right click
+can change on listening right click (patch)
 file export --> PE
 put in downlaods change name
 run new 
