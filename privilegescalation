@@ -67,6 +67,6 @@ stat filemodifying.exe
 
 Newer Rsyslog references /etc/rsyslog.d/* for settings/rules
 Older version only uses /etc/rsyslog.conf
-
+<facility>.<priority>
 
  
