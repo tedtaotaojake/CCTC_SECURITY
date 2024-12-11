@@ -68,5 +68,8 @@ stat filemodifying.exe
 Newer Rsyslog references /etc/rsyslog.d/* for settings/rules
 Older version only uses /etc/rsyslog.conf
 <facility>.<priority>
-
+kern.*                                                # All kernel messages, all severities
+mail.crit
+cron.!info,!debug                                                            # old format
+*.* action(type="omfwd" target="192.168.10.254" port="514" protocol="udp")   # New format
  
