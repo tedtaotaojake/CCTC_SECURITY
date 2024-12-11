@@ -55,9 +55,18 @@ rm -rf /var/log/... (get rid of it)
 cat /dev/null > /var/log/... (clear)
 echo > /var/log/... (clear)
 
+timestomp
+touch -c -t 201603051015 1.txt   # Explicit
+touch -r 3.txt 1.txt    # Reference
 
+touch -c -t 201802061427 file.exe
+stat file.exe
+touch -r because of the .00000 
+touch -r actualfile filemodifying.exe
+stat filemodifying.exe
 
-
+Newer Rsyslog references /etc/rsyslog.d/* for settings/rules
+Older version only uses /etc/rsyslog.conf
 
 
  
