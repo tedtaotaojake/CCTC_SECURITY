@@ -72,4 +72,15 @@ kern.*                                                # All kernel messages, all
 mail.crit
 cron.!info,!debug                                                            # old format
 *.* action(type="omfwd" target="192.168.10.254" port="514" protocol="udp")   # New format
- 
+
+
+//ctfd
+student@lin-ops:~$ ssh -S /tmp/jump jump -O forward -L 1230:192.168.28.105:2222
+student@lin-ops:~$ ssh comrade@127.0.0.1 -p 1230
+
+
+
+
+
+
+
