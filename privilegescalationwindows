@@ -49,6 +49,13 @@ auditpol /get /category:* | findstr /i "success failure"       //get what is bei
 7045 - Service created
 
 
+EVENT LOGGING //Use GUI
+Storage: c:\windows\system32\config\
+File-Type: .evtx/.evt
+wevtutil el
+wmic ntevent where "logfile="<LOGNAME>" list full
+Get-Eventlog -List
+
 
 
 
