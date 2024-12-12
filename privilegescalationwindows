@@ -57,6 +57,13 @@ wmic ntevent where "logfile="<LOGNAME>" list full
 Get-Eventlog -List
 
 
+student@lin-ops:~$ ssh -S /tmp/jump jump -O forward -L 1230:192.168.28.105:2222 
+student@lin-ops:~$ ssh comrade@127.0.0.1 -p 1230
+student@lin-ops:~$ ssh -MS /tmp/pivot2 comrade@127.0.0.1 -p 1230
+student@lin-ops:~$ ssh -S /tmp/pivot2 pivot2 -O forward -L 4545:192.168.28.5:3389
+student@lin-ops:~$ xfreerdp /v:127.0.0.1:4545 /u:student /glyph-cache /clipboard /dynamic-resolution
+student@lin-ops:~$ vi /home/student/.config/freerdp/known_hosts
+student@lin-ops:~$ xfreerdp /v:127.0.0.1:4545 /u:comrade /glyph-cache /clipboard /dynamic-resolution
 
 
 
