@@ -80,8 +80,17 @@ student@lin-ops:~$ scp -r longTermStorage student@10.50.25.127:C:\Downloads
 c file = vscode
 read key, boom
 
+------------------------------------------------------------------------------------------
+
+extra notes:
+
+success statement ex:
+if x + 4 = 14 {
+<code>
+}
 
 
+>> bit shfit
 
 
 
